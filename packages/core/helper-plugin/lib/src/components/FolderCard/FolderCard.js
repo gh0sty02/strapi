@@ -30,15 +30,7 @@ const StyledFolder = styled(Folder)`
   }
 `;
 
-export const FolderCard = ({
-  children,
-  id,
-  startAction,
-  ariaLabel,
-  href,
-  onDoubleClick,
-  ...props
-}) => {
+function FolderCard({ children, id, startAction, ariaLabel, href, onDoubleClick, ...props }) {
   const generatedId = useId('folder-card', id);
 
   return (
@@ -86,7 +78,7 @@ export const FolderCard = ({
       </Box>
     </FolderCardContext.Provider>
   );
-};
+}
 
 FolderCard.defaultProps = {
   id: undefined,
@@ -100,3 +92,5 @@ FolderCard.propTypes = {
   onDoubleClick: PropTypes.func.isRequired,
   startAction: PropTypes.element.isRequired,
 };
+
+export default FolderCard;

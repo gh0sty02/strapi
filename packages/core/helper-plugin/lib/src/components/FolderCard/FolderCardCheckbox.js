@@ -3,7 +3,7 @@ import { Box } from '@strapi/design-system/Box';
 import { BaseCheckbox } from '@strapi/design-system/BaseCheckbox';
 import { useFolderCard } from './FolderCardContext';
 
-export const FolderCardCheckbox = props => {
+function FolderCardCheckbox(props) {
   const { id } = useFolderCard();
 
   return (
@@ -11,4 +11,6 @@ export const FolderCardCheckbox = props => {
       <BaseCheckbox aria-labelledby={`${id}-title`} {...props} />
     </Box>
   );
-};
+}
+
+export default FolderCardCheckbox;

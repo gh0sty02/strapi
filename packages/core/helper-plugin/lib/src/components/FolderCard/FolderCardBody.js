@@ -9,7 +9,7 @@ const StyledBox = styled(Flex)`
   user-select: none;
 `;
 
-export const FolderCardBody = props => {
+function FolderCardBody(props) {
   const { id } = useFolderCard();
 
   return (
@@ -22,4 +22,6 @@ export const FolderCardBody = props => {
       zIndex={3}
     />
   );
-};
+}
+
+export default FolderCardBody;
